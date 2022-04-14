@@ -1,0 +1,11 @@
+<div style="margin: 24px;">
+<h1>All our Flats (<%= Flat.count %>)</h1>
+<ul>
+  <% @flats.each do |flat| %>
+    <li> <%= link_to flat.name, flat_path(flat) %> </li>
+    <p><%= flat.description %></p>
+    <p><%= flat.price_per_night %>€</p>
+  <% end %>
+</ul>
+
+</div>
